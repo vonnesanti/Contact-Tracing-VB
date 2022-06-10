@@ -88,13 +88,16 @@
         checkbxMuscle.Checked = False
         checkbxloss.Checked = False
 
-        MessageBox.Show("Your Form was submitted!")
+        MessageBox.Show("Your Form was submitted!", "CONTACT TRACING FORM")
 
         writefile.Close()
 
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Application.Exit()
+        Dim GameExit As DialogResult = MessageBox.Show("Are you sure you want to exit?", "CONTACT TRACING FORM", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information)
+        If GameExit = DialogResult.Yes Then
+            Application.Exit()
+        End If
     End Sub
 End Class
