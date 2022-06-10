@@ -30,17 +30,28 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtbxFullName = New System.Windows.Forms.TextBox()
+        Me.txtbxAddress = New System.Windows.Forms.TextBox()
+        Me.txtbxDate = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.maleButton = New System.Windows.Forms.RadioButton()
+        Me.femaleButton = New System.Windows.Forms.RadioButton()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtbxAge = New System.Windows.Forms.TextBox()
+        Me.txtbxContact = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.YesButton = New System.Windows.Forms.RadioButton()
+        Me.noButton = New System.Windows.Forms.RadioButton()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,16 +69,16 @@ Partial Class Form1
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.TextBox5)
-        Me.Panel1.Controls.Add(Me.TextBox4)
+        Me.Panel1.Controls.Add(Me.txtbxContact)
+        Me.Panel1.Controls.Add(Me.txtbxAge)
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.RadioButton2)
-        Me.Panel1.Controls.Add(Me.RadioButton1)
+        Me.Panel1.Controls.Add(Me.femaleButton)
+        Me.Panel1.Controls.Add(Me.maleButton)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.txtbxDate)
+        Me.Panel1.Controls.Add(Me.txtbxAddress)
+        Me.Panel1.Controls.Add(Me.txtbxFullName)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -78,6 +89,16 @@ Partial Class Form1
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.noButton)
+        Me.Panel2.Controls.Add(Me.YesButton)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.CheckBox4)
+        Me.Panel2.Controls.Add(Me.CheckBox5)
+        Me.Panel2.Controls.Add(Me.CheckBox6)
+        Me.Panel2.Controls.Add(Me.CheckBox3)
+        Me.Panel2.Controls.Add(Me.CheckBox2)
+        Me.Panel2.Controls.Add(Me.CheckBox1)
+        Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Location = New System.Drawing.Point(15, 224)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(681, 188)
@@ -129,29 +150,29 @@ Partial Class Form1
         Me.Label3.Text = "Date: "
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'TextBox1
+        'txtbxFullName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(110, 14)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(224, 27)
-        Me.TextBox1.TabIndex = 5
+        Me.txtbxFullName.Location = New System.Drawing.Point(110, 14)
+        Me.txtbxFullName.Multiline = True
+        Me.txtbxFullName.Name = "txtbxFullName"
+        Me.txtbxFullName.Size = New System.Drawing.Size(224, 27)
+        Me.txtbxFullName.TabIndex = 5
         '
-        'TextBox2
+        'txtbxAddress
         '
-        Me.TextBox2.Location = New System.Drawing.Point(158, 57)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(266, 27)
-        Me.TextBox2.TabIndex = 6
+        Me.txtbxAddress.Location = New System.Drawing.Point(158, 57)
+        Me.txtbxAddress.Multiline = True
+        Me.txtbxAddress.Name = "txtbxAddress"
+        Me.txtbxAddress.Size = New System.Drawing.Size(266, 27)
+        Me.txtbxAddress.TabIndex = 6
         '
-        'TextBox3
+        'txtbxDate
         '
-        Me.TextBox3.Location = New System.Drawing.Point(110, 101)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(224, 27)
-        Me.TextBox3.TabIndex = 7
+        Me.txtbxDate.Location = New System.Drawing.Point(110, 101)
+        Me.txtbxDate.Multiline = True
+        Me.txtbxDate.Name = "txtbxDate"
+        Me.txtbxDate.Size = New System.Drawing.Size(224, 27)
+        Me.txtbxDate.TabIndex = 7
         '
         'Label4
         '
@@ -177,29 +198,29 @@ Partial Class Form1
         Me.Label5.Text = "Gender:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'RadioButton1
+        'maleButton
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.RadioButton1.Location = New System.Drawing.Point(512, 57)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(48, 17)
-        Me.RadioButton1.TabIndex = 10
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Male"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.maleButton.AutoSize = True
+        Me.maleButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.maleButton.Location = New System.Drawing.Point(512, 57)
+        Me.maleButton.Name = "maleButton"
+        Me.maleButton.Size = New System.Drawing.Size(48, 17)
+        Me.maleButton.TabIndex = 10
+        Me.maleButton.TabStop = True
+        Me.maleButton.Text = "Male"
+        Me.maleButton.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'femaleButton
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.RadioButton2.Location = New System.Drawing.Point(584, 58)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(59, 17)
-        Me.RadioButton2.TabIndex = 11
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Female"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.femaleButton.AutoSize = True
+        Me.femaleButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.femaleButton.Location = New System.Drawing.Point(584, 58)
+        Me.femaleButton.Name = "femaleButton"
+        Me.femaleButton.Size = New System.Drawing.Size(59, 17)
+        Me.femaleButton.TabIndex = 11
+        Me.femaleButton.TabStop = True
+        Me.femaleButton.Text = "Female"
+        Me.femaleButton.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -213,21 +234,135 @@ Partial Class Form1
         Me.Label6.Text = "Contact: "
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'TextBox4
+        'txtbxAge
         '
-        Me.TextBox4.Location = New System.Drawing.Point(486, 13)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(51, 27)
-        Me.TextBox4.TabIndex = 13
+        Me.txtbxAge.Location = New System.Drawing.Point(486, 13)
+        Me.txtbxAge.Multiline = True
+        Me.txtbxAge.Name = "txtbxAge"
+        Me.txtbxAge.Size = New System.Drawing.Size(51, 27)
+        Me.txtbxAge.TabIndex = 13
         '
-        'TextBox5
+        'txtbxContact
         '
-        Me.TextBox5.Location = New System.Drawing.Point(495, 100)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(170, 27)
-        Me.TextBox5.TabIndex = 14
+        Me.txtbxContact.Location = New System.Drawing.Point(495, 100)
+        Me.txtbxContact.Multiline = True
+        Me.txtbxContact.Name = "txtbxContact"
+        Me.txtbxContact.Size = New System.Drawing.Size(170, 27)
+        Me.txtbxContact.TabIndex = 14
+        '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(14, 10)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(284, 27)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "Check any recent symptoms you've had:"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.CheckBox1.Location = New System.Drawing.Point(18, 41)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(57, 17)
+        Me.CheckBox1.TabIndex = 16
+        Me.CheckBox1.Text = "Cough"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.CheckBox2.Location = New System.Drawing.Point(18, 64)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(53, 17)
+        Me.CheckBox2.TabIndex = 17
+        Me.CheckBox2.Text = "Fever"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.CheckBox3.Location = New System.Drawing.Point(18, 87)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(119, 17)
+        Me.CheckBox3.TabIndex = 18
+        Me.CheckBox3.Text = "Shortness of Breath"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.CheckBox4.Location = New System.Drawing.Point(18, 156)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(131, 17)
+        Me.CheckBox4.TabIndex = 21
+        Me.CheckBox4.Text = "Lost of taste and smell"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.CheckBox5.Location = New System.Drawing.Point(18, 133)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(84, 17)
+        Me.CheckBox5.TabIndex = 20
+        Me.CheckBox5.Text = "Muscle Pain"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.CheckBox6.Location = New System.Drawing.Point(18, 110)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(82, 17)
+        Me.CheckBox6.TabIndex = 19
+        Me.CheckBox6.Text = "Sore Throat"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(319, 41)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(324, 49)
+        Me.Label8.TabIndex = 22
+        Me.Label8.Text = "Have you travelled domestically or internationally within the last 14 days?"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'YesButton
+        '
+        Me.YesButton.AutoSize = True
+        Me.YesButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.YesButton.Location = New System.Drawing.Point(362, 94)
+        Me.YesButton.Name = "YesButton"
+        Me.YesButton.Size = New System.Drawing.Size(43, 17)
+        Me.YesButton.TabIndex = 23
+        Me.YesButton.TabStop = True
+        Me.YesButton.Text = "Yes"
+        Me.YesButton.UseVisualStyleBackColor = True
+        '
+        'noButton
+        '
+        Me.noButton.AutoSize = True
+        Me.noButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.noButton.Location = New System.Drawing.Point(362, 133)
+        Me.noButton.Name = "noButton"
+        Me.noButton.Size = New System.Drawing.Size(39, 17)
+        Me.noButton.TabIndex = 24
+        Me.noButton.TabStop = True
+        Me.noButton.Text = "No"
+        Me.noButton.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -246,6 +381,8 @@ Partial Class Form1
         Me.Text = "Contact Tracing Form"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -255,17 +392,27 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtbxContact As TextBox
+    Friend WithEvents txtbxAge As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents femaleButton As RadioButton
+    Friend WithEvents maleButton As RadioButton
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtbxDate As TextBox
+    Friend WithEvents txtbxAddress As TextBox
+    Friend WithEvents txtbxFullName As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents CheckBox5 As CheckBox
+    Friend WithEvents CheckBox6 As CheckBox
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents noButton As RadioButton
+    Friend WithEvents YesButton As RadioButton
+    Friend WithEvents Label8 As Label
 End Class
