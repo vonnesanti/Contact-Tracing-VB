@@ -91,6 +91,7 @@ Partial Class Form1
         '
         'txtbxContact
         '
+        Me.txtbxContact.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbxContact.Location = New System.Drawing.Point(495, 100)
         Me.txtbxContact.Multiline = True
         Me.txtbxContact.Name = "txtbxContact"
@@ -99,6 +100,7 @@ Partial Class Form1
         '
         'txtbxAge
         '
+        Me.txtbxAge.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbxAge.Location = New System.Drawing.Point(486, 13)
         Me.txtbxAge.Multiline = True
         Me.txtbxAge.Name = "txtbxAge"
@@ -167,6 +169,7 @@ Partial Class Form1
         '
         'txtbxDate
         '
+        Me.txtbxDate.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbxDate.Location = New System.Drawing.Point(110, 101)
         Me.txtbxDate.Multiline = True
         Me.txtbxDate.Name = "txtbxDate"
@@ -175,6 +178,7 @@ Partial Class Form1
         '
         'txtbxAddress
         '
+        Me.txtbxAddress.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbxAddress.Location = New System.Drawing.Point(158, 57)
         Me.txtbxAddress.Multiline = True
         Me.txtbxAddress.Name = "txtbxAddress"
@@ -183,6 +187,7 @@ Partial Class Form1
         '
         'txtbxFullName
         '
+        Me.txtbxFullName.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbxFullName.Location = New System.Drawing.Point(110, 14)
         Me.txtbxFullName.Multiline = True
         Me.txtbxFullName.Name = "txtbxFullName"

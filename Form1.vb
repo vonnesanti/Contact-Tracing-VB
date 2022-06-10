@@ -26,13 +26,13 @@
         writefile.WriteLine("Full Name:" + txtbxFullName.Text)
         writefile.WriteLine("Complete Address:" + txtbxAddress.Text)
         writefile.WriteLine("Date:" + txtbxDate.Text)
-        writefile.WriteLine("Age" + txtbxAge.Text)
+        writefile.WriteLine("Age:" + txtbxAge.Text)
         If maleButton.Checked Then
             writefile.WriteLine(lblGender.Text & " " & "Male")
         ElseIf femaleButton.Checked Then
             writefile.WriteLine(lblGender.Text & " " & "Female")
         End If
-        writefile.WriteLine("Contact" + txtbxContact.Text)
+        writefile.WriteLine("Contact:" + txtbxContact.Text)
 
         If checkbxCough.CheckState = CheckState.Checked Then
             writefile.WriteLine("Check any recent symptoms you've had: Cough")
