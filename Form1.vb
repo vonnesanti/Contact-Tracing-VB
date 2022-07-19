@@ -1,4 +1,14 @@
-﻿Public Class Form1
+﻿Imports WebCam_Capture
+Imports MessagingToolkit
+Imports MessagingToolkit.Barcode
+Imports MessagingToolkit.QRCode.Codec
+Imports QRCoder
+Imports System.IO
+
+Public Class Form1
+
+    WithEvents Mycam As WebCamCapture
+    Dim Decoder As QRCodeDecoder
 
     Dim G As String
     Dim Q1 As String
@@ -21,7 +31,7 @@
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         Dim writefile As System.IO.StreamWriter
-        writefile = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\fujjitsu\source\repos\VB_TicTacToe\ContactTracingForm.txt", True)
+        writefile = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\fujjitsu\source\repos\Contact Tracing Form\ContactTracingForm.txt", True)
         writefile.WriteLine("CONTACT TRACING FORM")
         writefile.WriteLine("Full Name:" + txtbxFullName.Text)
         writefile.WriteLine("Complete Address:" + txtbxAddress.Text)
@@ -99,5 +109,68 @@
         If GameExit = DialogResult.Yes Then
             Application.Exit()
         End If
+    End Sub
+
+    Private Sub genBtn_Click(sender As Object, e As EventArgs) Handles genBtn.Click
+        QRtxtbx.Text = "Full Name:" + txtbxFullName.Text & vbCrLf &
+           "Complete Address:" + txtbxAddress.Text & vbCrLf &
+           "Date:" + txtbxDate.Text & vbCrLf &
+           "Age:" + txtbxAge.Text & vbCrLf &
+           "Gender:" + lblGender.Text & vbCrLf &
+           "Contact:" + txtbxContact.Text & vbCrLf &
+           "Check any recent symptoms you've had:" + Label7.Text & vbCrLf &
+           "Have you travelled domestically or internationally within the last 14 days?" + lblTravel.Text & vbCrLf &
+
+        Dim Gen As New QRCodeGenerator
+        Dim data = Gen.CreateQrCode(QRtxtbx.Text, QRCodeGenerator.ECCLevel.Q)
+        Dim code As New QRCode(data)
+        picQRbx.Image = code.GetGraphic(6)
+    End Sub
+
+    Private Sub saveBtn_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
+        Dim SD As New SaveFileDialog
+        SD.FileName = "Saved QR Code"
+        SD.Filter = "Png Files Only (*.png)|*.png"
+        If SD.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            Try
+                picQRbx.Image.Save(SD.FileName, System.Drawing.Imaging.ImageFormat.Png)
+                MessageBox.Show("Saved!")
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
+
+    Private Sub scanBtn_Click(sender As Object, e As EventArgs) Handles scanBtn.Click
+        Try
+            StopWebCam()
+            Mycam = New WebCamCapture
+            Mycam.Start(0)
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub StopWebCam()
+        Try
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Mycam_ImageCaptured(source As Object, e As WebcamEventArgs) Handles Mycam.ImageCaptured
+        picQRbx.Image = e.WebCamImage
+    End Sub
+
+    Private Sub capBtn_Click(sender As Object, e As EventArgs) Handles capBtn.Click
+        Try
+            StopWebCam()
+            Decoder = New QRCodeDecoder
+            QRtxtbx.Text = Decoder.decode(New Data.QRCodeBitmapImage(picQRbx.Image))
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

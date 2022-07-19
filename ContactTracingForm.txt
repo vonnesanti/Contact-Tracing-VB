@@ -1,0 +1,12 @@
+﻿CONTACT TRACING FORM
+Full Name:Yvonne B. Santiago
+Complete Address:Sabang Tuy, Batangas
+Date:June 25, 2022
+Age:22
+Gender: Female
+Contact:09876543211
+Check any recent symptoms you've had: Cough
+Check any recent symptoms you've had: Fever
+Check any recent symptoms you've had: Muscle Pain
+Have you travelled domestically or internationally within the last 14 days? No
+

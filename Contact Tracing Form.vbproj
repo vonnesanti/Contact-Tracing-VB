@@ -48,6 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\..\..\..\..\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2019\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -58,6 +61,9 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="WebCam_Capture">
+      <HintPath>..\..\..\..\..\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2019\WebCam_Capture.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />

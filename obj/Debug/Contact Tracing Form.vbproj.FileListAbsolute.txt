@@ -10,3 +10,5 @@ C:\Users\fujjitsu\source\repos\Contact Tracing Form\obj\Debug\Contact Tracing Fo
 C:\Users\fujjitsu\source\repos\Contact Tracing Form\obj\Debug\Contact Tracing Form.exe
 C:\Users\fujjitsu\source\repos\Contact Tracing Form\obj\Debug\Contact Tracing Form.xml
 C:\Users\fujjitsu\source\repos\Contact Tracing Form\obj\Debug\Contact Tracing Form.pdb
+C:\Users\fujjitsu\source\repos\Contact Tracing Form\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\fujjitsu\source\repos\Contact Tracing Form\bin\Debug\WebCam_Capture.dll

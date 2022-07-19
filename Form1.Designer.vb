@@ -50,11 +50,19 @@ Partial Class Form1
         Me.checkbxCough = New System.Windows.Forms.CheckBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.capBtn = New System.Windows.Forms.Button()
+        Me.scanBtn = New System.Windows.Forms.Button()
+        Me.saveBtn = New System.Windows.Forms.Button()
+        Me.genBtn = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.QRtxtbx = New System.Windows.Forms.TextBox()
+        Me.picQRbx = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.picQRbx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -244,14 +252,14 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Location = New System.Drawing.Point(15, 224)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(681, 188)
+        Me.Panel2.Size = New System.Drawing.Size(568, 316)
         Me.Panel2.TabIndex = 3
         '
         'noButton
         '
         Me.noButton.AutoSize = True
         Me.noButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.noButton.Location = New System.Drawing.Point(362, 133)
+        Me.noButton.Location = New System.Drawing.Point(25, 267)
         Me.noButton.Name = "noButton"
         Me.noButton.Size = New System.Drawing.Size(39, 17)
         Me.noButton.TabIndex = 24
@@ -263,7 +271,7 @@ Partial Class Form1
         '
         Me.YesButton.AutoSize = True
         Me.YesButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.YesButton.Location = New System.Drawing.Point(362, 94)
+        Me.YesButton.Location = New System.Drawing.Point(25, 244)
         Me.YesButton.Name = "YesButton"
         Me.YesButton.Size = New System.Drawing.Size(43, 17)
         Me.YesButton.TabIndex = 23
@@ -276,9 +284,9 @@ Partial Class Form1
         Me.lblTravel.BackColor = System.Drawing.Color.Transparent
         Me.lblTravel.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTravel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblTravel.Location = New System.Drawing.Point(319, 41)
+        Me.lblTravel.Location = New System.Drawing.Point(3, 192)
         Me.lblTravel.Name = "lblTravel"
-        Me.lblTravel.Size = New System.Drawing.Size(324, 49)
+        Me.lblTravel.Size = New System.Drawing.Size(253, 49)
         Me.lblTravel.TabIndex = 22
         Me.lblTravel.Text = "Have you travelled domestically or internationally within the last 14 days?"
         Me.lblTravel.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -363,21 +371,74 @@ Partial Class Form1
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.capBtn)
+        Me.Panel3.Controls.Add(Me.scanBtn)
+        Me.Panel3.Controls.Add(Me.saveBtn)
+        Me.Panel3.Controls.Add(Me.genBtn)
+        Me.Panel3.Controls.Add(Me.Button1)
+        Me.Panel3.Controls.Add(Me.btnSubmit)
+        Me.Panel3.Controls.Add(Me.QRtxtbx)
+        Me.Panel3.Controls.Add(Me.picQRbx)
+        Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.lblTitle)
         Me.Panel3.Controls.Add(Me.Panel2)
         Me.Panel3.Controls.Add(Me.Panel1)
-        Me.Panel3.Location = New System.Drawing.Point(12, 9)
+        Me.Panel3.Location = New System.Drawing.Point(12, 25)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(713, 429)
+        Me.Panel3.Size = New System.Drawing.Size(1115, 561)
         Me.Panel3.TabIndex = 4
+        '
+        'capBtn
+        '
+        Me.capBtn.BackColor = System.Drawing.Color.MistyRose
+        Me.capBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.capBtn.Location = New System.Drawing.Point(1007, 276)
+        Me.capBtn.Name = "capBtn"
+        Me.capBtn.Size = New System.Drawing.Size(82, 42)
+        Me.capBtn.TabIndex = 13
+        Me.capBtn.Text = "Capture"
+        Me.capBtn.UseVisualStyleBackColor = False
+        '
+        'scanBtn
+        '
+        Me.scanBtn.BackColor = System.Drawing.Color.MistyRose
+        Me.scanBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.scanBtn.Location = New System.Drawing.Point(919, 276)
+        Me.scanBtn.Name = "scanBtn"
+        Me.scanBtn.Size = New System.Drawing.Size(82, 42)
+        Me.scanBtn.TabIndex = 12
+        Me.scanBtn.Text = "Scan QR"
+        Me.scanBtn.UseVisualStyleBackColor = False
+        '
+        'saveBtn
+        '
+        Me.saveBtn.BackColor = System.Drawing.Color.MistyRose
+        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveBtn.Location = New System.Drawing.Point(831, 276)
+        Me.saveBtn.Name = "saveBtn"
+        Me.saveBtn.Size = New System.Drawing.Size(82, 42)
+        Me.saveBtn.TabIndex = 11
+        Me.saveBtn.Text = "SAVE"
+        Me.saveBtn.UseVisualStyleBackColor = False
+        '
+        'genBtn
+        '
+        Me.genBtn.BackColor = System.Drawing.Color.MistyRose
+        Me.genBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.genBtn.Location = New System.Drawing.Point(743, 276)
+        Me.genBtn.Name = "genBtn"
+        Me.genBtn.Size = New System.Drawing.Size(82, 42)
+        Me.genBtn.TabIndex = 10
+        Me.genBtn.Text = "Gen. QR"
+        Me.genBtn.UseVisualStyleBackColor = False
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.MistyRose
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(243, 447)
+        Me.Button1.Location = New System.Drawing.Point(625, 453)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(82, 44)
+        Me.Button1.Size = New System.Drawing.Size(82, 47)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Exit"
         Me.Button1.UseVisualStyleBackColor = False
@@ -386,12 +447,40 @@ Partial Class Form1
         '
         Me.btnSubmit.BackColor = System.Drawing.Color.MistyRose
         Me.btnSubmit.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSubmit.Location = New System.Drawing.Point(435, 447)
+        Me.btnSubmit.Location = New System.Drawing.Point(625, 380)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(82, 44)
+        Me.btnSubmit.Size = New System.Drawing.Size(82, 54)
         Me.btnSubmit.TabIndex = 6
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = False
+        '
+        'QRtxtbx
+        '
+        Me.QRtxtbx.Location = New System.Drawing.Point(743, 332)
+        Me.QRtxtbx.Multiline = True
+        Me.QRtxtbx.Name = "QRtxtbx"
+        Me.QRtxtbx.Size = New System.Drawing.Size(350, 219)
+        Me.QRtxtbx.TabIndex = 9
+        '
+        'picQRbx
+        '
+        Me.picQRbx.Location = New System.Drawing.Point(743, 47)
+        Me.picQRbx.Name = "picQRbx"
+        Me.picQRbx.Size = New System.Drawing.Size(350, 223)
+        Me.picQRbx.TabIndex = 7
+        Me.picQRbx.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Monotype Corsiva", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(804, 11)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(215, 33)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Generate QR Now!"
         '
         'Form1
         '
@@ -400,9 +489,7 @@ Partial Class Form1
         Me.BackColor = System.Drawing.SystemColors.ControlDark
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(737, 503)
-        Me.Controls.Add(Me.btnSubmit)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(1169, 598)
         Me.Controls.Add(Me.Panel3)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -415,6 +502,8 @@ Partial Class Form1
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        CType(Me.picQRbx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -448,4 +537,11 @@ Partial Class Form1
     Friend WithEvents lblTravel As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents btnSubmit As Button
+    Friend WithEvents picQRbx As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents capBtn As Button
+    Friend WithEvents scanBtn As Button
+    Friend WithEvents saveBtn As Button
+    Friend WithEvents genBtn As Button
+    Friend WithEvents QRtxtbx As TextBox
 End Class
